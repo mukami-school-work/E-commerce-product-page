@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Sample</title>
+    <title>	Ecommerce Landing Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +13,7 @@
 <body>
 	<!----header--->
 	<header>
-		<a href="#" class="logo">Classix</a>
+		<a href="#" class="logo">Pop-Up</a>
 
 		<ul class="navlist">
 			<li><a href="#home">Home</a></li>
@@ -30,21 +31,31 @@
 	<!----home--->
 	<section class="home" id="home">
 		<div class="home-text">
-			<h1>New <br><span>Arrivals</span></h1>
-			<p>New colors, now also available in all of our collection</p>
-			<a href="#" class="btn">View Collection</a>
+			<h1>Pop-Up <br><span>With a Touch of Class</span></h1>
+			<p>We have all our products listed on this page. <br> subscribe to our emailing list for more updates.</p>
+			<a href="#buttons" class="btn">View Collection</a>
 		</div>
 	</section>
+	<!--End of home section-->
 
-    <div class="container">
-        <div class="heading">
-            <h2>Our Exclusive Products</h2>
-        </div>
-        <div class="products">
-            
-        </div>
+	<div class="container mx-auto">
+        <h1 class="font-poppins text-center text-3xl font-bold pt-24">Our Exclusive Products</h1>
     </div>
-    
+
+    <!-- form -->
+    <form class="text-center py-4">
+        <input type="text" class="placeholder-gray-800 focus:outline-none bg-gray-200 text-gray-800 w-2/4 py-2 px-3 font-poppins rounded-md" id="filterInput" placeholder="Search for the product..">        
+    </form>
+      <div id="buttons" class="text-center py-4">
+        <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md" id="the-all-btn">All</button> 
+      </div>
+
+    <!-- product grid -->
+    <div class="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-12 gap-20">
+
+    </div>
+
+
     
     <script type="text/javascript" src="script.js"></script>
 </body>

@@ -19,31 +19,114 @@ document.addEventListener('DOMContentLoaded', function() {
         navlist.classList.remove('open');
     };
 
-    let products = document.querySelector('.products')
-    async function fetchProducts(url){
-        let data = await fetch(url);
-        let response = await data.json();
-        console.log(response)
 
-    for (let i = 0; i < response.length; i++) {
-        let description = response[i].description
-        products.innerHTML +=`
-        <div class="product">
-            <img src="${response[i].image}" alt="" class="product-img">
-            <div class="product-content">
-                <h2 class="product-title">${response[i].title}</h2>
-                <h4 class="product-category">${response[i].category}</h4>
-                
-                <div class="product-price-container">
-                    <h3 class="product-price">$ ${response[i].price}</h3>
-                    <a href="#!" data-productId= "${response[i].id}" class="add-to-cart">Add To Cart</a>
-                </div>
-            </div>
-        </div>`;
-    
-    }
+  let grid = document.querySelector(".products");
+  let filterInput = document.getElementById("filterInput");
+  let buttons = document.querySelector('#buttons');
+  let allButton = document.querySelector('#the-all-btn');
+
+  fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(json =>{
+
+          // iterating products
+          for (let value of json){
+              
+              addElement(grid, value)
+            
+          }
+          
+      });
+
+      fetch('https://fakestoreapi.com/products/categories')
+      .then(res=>res.json())
+      .then(json=> {
+
+        // iterating categories
+        for (let value of json){
+          console.log(value)
+              
+          addButton(buttons, value);
         
-   
-    };
-    fetchProducts('https://fakestoreapi.com/products');
-});
+        }
+      
+      })
+
+
+  // add event listener
+  filterInput.addEventListener('keyup', filterProducts);
+
+  // add event listener on the all button
+  allButton.addEventListener('click', () => {
+    location.reload();
+  });
+
+  // callback function 
+  function filterProducts(){
+      let filterValue = filterInput.value.toUpperCase();
+      let item = grid.querySelectorAll('.item')
+      // console.log(filterValue);
+
+      for (let i = 0; i < item.length; i++){
+          let span = item[i].querySelector('.title');
+
+          if(span.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+              item[i].style.display = "initial";
+          }else{
+              item[i].style.display = "none";
+          }
+          
+      }
+  } 
+
+
+  // get value from the api create dynamic buttons
+  function addButton(appendIn, value){
+  let button = document.createElement('button');
+  button.className = "border-2 px-8 py-1 bg-yellow-400 border rounded-md "
+  let [ a, b, c, d ] = value;
+  button.id = value;
+  let categoryChoice = button.innerHTML = value;
+
+  appendIn.appendChild(button);
+
+  // add event listener
+  button.addEventListener('click', filterProduct);
+
+  function filterProduct(){
+    let buttonValue = categoryChoice.toUpperCase();
+    let item = grid.querySelectorAll('.item');
+
+      for (let i = 0; i < item.length; i++){
+        let span = item[i].querySelector('a.block');
+
+          if(span.innerHTML.toUpperCase().indexOf(buttonValue) > -1){
+              item[i].style.display = "initial";
+          }else{
+              item[i].style.display = "none";
+          }
+      
+      }
+    }
+  }
+
+  // get value from the api create dynamic element
+  function addElement(appendIn, value){
+      let div = document.createElement('div');
+      div.className = 'item justify-self-center';
+
+      let { image, title, category, price } = value;
+      div.innerHTML = `
+              <img src="${image}" class="bg-cover img mx-auto" alt="img1">
+              <div class="text-center py-3 font-poppins">
+                  <h1 class="text-lg title">${title}</h1>
+                  <a href="#" class="block"><span class="text-sm text-red-400">${category}</span></a>
+                  <span class="block py-3">$<span class="text-md">${price}</span></span>
+                  <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md">Buy Now</button>
+              </div>
+      `;
+      appendIn.appendChild(div);
+    
+  }
+
+  });
