@@ -1,27 +1,19 @@
 	*{
 		padding: 0;
 		margin: 0;
-		font-family: 'Josefin Sans', sans-serif;
 		box-sizing: border-box;
-		line-height: 1.8;
-		text-decoration: none;
+		font-family: 'Open Sans', sans-serif;
 		list-style: none;
-	}
-	:root{
-		--bg-color: #ffffff;
-		--text-color: #111111;
-		--main-color: #c8815f;
-		--big-font: 4.0rem;
-		--h2-font: 3.3rem;
-		--h3-font: 2rem;
-		--normal-font: 1.5rem;
+		text-decoration: none;
 	}
 
 	body{
-		background: var(--bg-color);
-		color: var(--text-color);
+		background: #ffffff;
+		color: #111111;
 	}
-	header{
+
+	/* Hero Section */
+	#header{
 		width: 100%;
 		top: 0;
 		right: 0;
@@ -34,37 +26,37 @@
 		padding: 20px 14%;
 		transition: all .35s ease;
 	}
-	.logo{
+	.brand{
 		font-size: 28px;
 		font-weight: 700;
 		letter-spacing: 1px;
-		color: var(--text-color);
+		color: #111111;
 	}
-	.navlist{
+	.navli{
 		display: flex;
 	}
-	.navlist a{
-		color: var(--text-color);
+	.navli a{
+		color: #111111;
 		font-weight: 600;
 		padding: 10px 25px;
-		font-size: var(--normal-font);
+		font-size: 1rem;
 		transition: all .36s ease;
 	}
-	.navlist a:hover{
-		color: var(--main-color);
+	.navli a:hover{
+		color: #c8815f;
 	}
 	.header-icons i{
 		font-size: 32px;
-		color: var(--text-color);
+		color: #111111;
 		margin-right: 20px;
 		transition: all .36s ease;
 	}
 	.header-icons i:hover{
-		color: var(--main-color);
+		color: #c8815f;
 	}
 	#menu-icon{
 		font-size: 34px;
-		color: var(--text-color);
+		color: #111111;
 		z-index: 10001;
 		margin-right: 20px;
 		display: none;
@@ -85,26 +77,26 @@
 		align-items: center;
 	}
 	.home-text h1{
-		font-size: var(--big-font);
-		font-weight: 600;
-		line-height: 1.0;
-		/* letter-spacing: .4rem; */
+		font-size: 4.5rem;
+		font-weight: 800;
+		line-height: 1.2;
+		letter-spacing: .6rem;
 		margin-bottom: 1.4rem;
 	}
 	.home-text span{
-		font-size: var(--h2-font);
+		font-size: 3.3rem;
 	}
 	.home-text p{
-		font-size: var(--normal-font);
-		font-weight: 350;
-		margin-bottom: 2rem;
-		/* letter-spacing: .2rem; */
+		font-size: 1rem;
+		font-weight: 500;
+		margin-bottom: 3rem;
+		letter-spacing: .2rem;
 	}
 	.btn{
 		display: inline-block;
 		padding: 13px 25px;
-		background: var(--main-color);
-		color: var(--bg-color);
+		background: #c8815f;
+		color:  #ffffff;
 		font-size: 15px;
 		letter-spacing: 1px;
 		font-weight: 600;
@@ -113,23 +105,17 @@
 	}
 	.btn:hover{
 		transform: translateY(-5px);
-		background: var(--text-color);
+		background: #111111;
 	}
 
-		header.sticky{
-		background: var(--bg-color);
+	header.sticky{
+		background:  #ffffff;
 		padding: 14px 14%;
 		box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 	}
+	/* End Hero Section */
 
-   .heading{
-    text-align: center;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-    color: var(--black);
-  	}
-
-  .img{
+  	.img{
     width: 250px;
     height: 350px;
     background-color: rgb(224, 224, 224);
@@ -141,4 +127,9 @@
 	button:hover{
 	transform: scale(1.1);
 	cursor: pointer;
+	}
+
+	#contact-form{
+		padding-top: 40px;
+		background-color: #f9f4f1;
 	}

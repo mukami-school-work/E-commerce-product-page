@@ -5,17 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>	Ecommerce Landing Page</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+	<!-- Tailwind link -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Bootstrap link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+	<!-- Email js script -->
+	<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	(function(){
+		emailjs.init("GDCCyjblodhymEe9N");
+	})();
+	</script>
+	<!-- End Email js script -->
+
 </head>
 <body>
 	<!----header--->
-	<header>
-		<a href="#" class="logo">Pop-Up</a>
+	<div id="header">
+		<a href="#" class="brand">Pop-Up</a>
 
-		<ul class="navlist">
+		<ul class="navli">
 			<li><a href="#home">Home</a></li>
 			<li><a href="#featured">Featured</a></li>
 			<li><a href="#new">New</a></li>
@@ -26,23 +45,23 @@
 			<a href="#"><i class='bx bx-shopping-bag'></i></a>
 			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
-	</header>
+	</div>
 
 	<!----home--->
 	<section class="home" id="home">
 		<div class="home-text">
-			<h1>Pop-Up <br><span>With a Touch of Class</span></h1>
-			<p>We have all our products listed on this page. <br> subscribe to our emailing list for more updates.</p>
-			<a href="#buttons" class="btn">View Collection</a>
+			<h1>New<br><span>Arrivals</span></h1>
+			<p>All our collections are listed on this page. Reach out to us for purchase.</p>
+			<a href="#the-all-btn" class="btn">View Collection</a>
 		</div>
 	</section>
 	<!--End of home section-->
 
-	<div class="container mx-auto">
+	<div class="container mx-auto" id="collection">
         <h1 class="font-poppins text-center text-3xl font-bold pt-24">Our Exclusive Products</h1>
     </div>
 
-    <!-- form -->
+    <!-- Filter form -->
     <form class="text-center py-4">
         <input type="text" class="placeholder-gray-800 focus:outline-none bg-gray-200 text-gray-800 w-2/4 py-2 px-3 font-poppins rounded-md" id="filterInput" placeholder="Search for the product..">        
     </form>
@@ -55,7 +74,49 @@
 
     </div>
 
+	<!-- contact form section starts here -->
+	<div id="contact-form">
+		<div class="container border mt-3 bg-light">
+			<div class="row">
+			<div class="col-md-6 p-5 bg-light text-dark">
+				<h1 style="padding: 10px; font-weight: bold;">Get in Touch!</h1>
+				<h4 style="font-size: 20px; padding: 15px;">
+				At Pop-Up, we offer elegant and high premium quality product. Reach at out to us. Payment is on delivery. 
+				</h4>
+				<h3 style="color: #d7785e; font-size: 18px; font-style: italic; padding-left: 20px;">Pop-Up With a Touch of Class!</h3>
+			</div>
+			<div class="col-md-6 border-left py-3">
+				<h1>Contact form</h1>
+				<div class="form-group">
+				<h5 for="name">Name</h5>
+				<input
+					type="text"
+					class="form-control"
+					id="name"
+					placeholder="Enter name"
+				/>
+				</div>
+				<div class="form-group">
+				<h5 for="email">Email</h5>
+				<input
+					type="email"
+					class="form-control"
+					id="email"
+					placeholder="Enter email"
+				/>
+				</div>
+				<div class="form-group">
+				<h5 for="message">Message</h5>
+				<textarea class="form-control" id="message" rows="3"></textarea>
+				</div>
+				<button class="btn btn-warning" onclick="sendMail()">Submit</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	  <!-- contact form section ends here -->
 
+	<script src="https://unpkg.com/scrollreveal"></script>
     
     <script type="text/javascript" src="script.js"></script>
 </body>

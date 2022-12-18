@@ -1,24 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() { 
 
-    const header = document.querySelector("header");
+   // Hero Section
 
-    window.addEventListener ("scroll", function() {
-        header.classList.toggle ("sticky", window.scrollY > 0);
-    });
+    const sr = ScrollReveal ({
+      distance: '30px',
+      duration: 2600,
+      reset: true
+    })
 
-    let menu = document.querySelector('#menu-icon');
-    let navlist = document.querySelector('.navlist');
+    sr.reveal('.home-text',{delay:280, origin:'bottom'})
 
-    menu.onclick = () => {
-        menu.classList.toggle('bx-x');
-        navlist.classList.toggle('open');
-    };
-
-    window.onscroll = () => {
-        menu.classList.remove('bx-x');
-        navlist.classList.remove('open');
-    };
-
+    // End Hero Section
 
   let grid = document.querySelector(".products");
   let filterInput = document.getElementById("filterInput");
@@ -129,4 +121,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
   }
 
-  });
+  // Contact form section starts here
+  function sendMail() {
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    const serviceID = "service_47oz8kn";
+    const templateID = "template_uhltvgf";
+
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Sent successfully!!")
+
+      })
+      .catch(err=>console.log(err));
+  }
+  sendMail();
+  // End of contact form section
+
+});
