@@ -120,30 +120,28 @@ document.addEventListener('DOMContentLoaded', function() {
       appendIn.appendChild(div);
     
   }
-
-  // Contact form section starts here
-  function sendMail() {
-    var params = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
-
-    const serviceID = "service_47oz8kn";
-    const templateID = "template_uhltvgf";
-
-      emailjs.send(serviceID, templateID, params)
-      .then(res=>{
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("message").value = "";
-          console.log(res);
-          alert("Sent successfully!!")
-
-      })
-      .catch(err=>console.log(err));
-  }
-  sendMail();
-  // End of contact form section
-
 });
+
+ // Contact form section starts here
+ function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_47oz8kn";
+  const templateID = "template_uhltvgf";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+}
+// End of contact form section
