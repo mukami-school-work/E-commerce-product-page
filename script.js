@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
         console.log(res);
-        alert("Sent successfully!!")
+        alert("Message Sent successfully!!")
 
     })
     .catch(err=>console.log(err));
