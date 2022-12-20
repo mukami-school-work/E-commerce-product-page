@@ -115,6 +115,7 @@
 	}
 	/* End Hero Section */
 
+	/* Products section */
   	.img{
     width: 250px;
     height: 350px;
@@ -129,7 +130,11 @@
 	cursor: pointer;
 	}
 
+	/* Contact section */
+
 	#contact-form{
 		padding-top: 40px;
 		background-color: #f9f4f1;
 	}
+
+	
