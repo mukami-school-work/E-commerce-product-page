@@ -133,8 +133,66 @@
 	/* Contact section */
 
 	#contact-form{
-		padding-top: 40px;
+		padding-top: 30px;
 		background-color: #f9f4f1;
+		padding-bottom: 30px;
 	}
 
-	
+		/* footer */
+	.contact{
+		background: var(--text-color);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+		gap: 2rem;
+	}
+	.main-contact h3{
+		font-size: 23px;
+		margin-bottom: 1.6rem;
+		color: var(--bg-color);
+	}
+	.main-contact h5{
+		font-size: 15px;
+		font-weight: 600;
+		color: #555;
+	}
+	.icons{
+		display: flex;
+		margin-top: 2rem;
+	}
+	.icons i{
+		font-size: 25px;
+		margin-right: 1rem;
+		color: #555;
+		transition: all .35s ease;
+	}
+	.icons i:hover{
+		color: var(--bg-color);
+		transform: scale(1.1) translateY(-5px);
+	}
+	.main-contact li{
+		margin-bottom: 15px;
+	}
+	.main-contact li a{
+		display: block;
+		color: #555;
+		font-size: var(--normal-font);
+		font-weight: 600;
+		transition: all .35s ease;
+	}
+	.main-contact li a:hover{
+		transform: translateX(-8px);
+		color: var(--bg-color);
+	}
+
+	.last-text{
+		text-align: center;
+		padding: 20px;
+		background: var(--text-color);
+	}
+	.last-text p{
+		color: #555;
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
+
+	/* End of footer */
