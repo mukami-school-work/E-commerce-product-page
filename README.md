@@ -4,8 +4,6 @@ This page will contain a collection of all products that this particular company
 
 The products will be fetched from the API and rendered onto our page. The products will have a title and the price of the product.
 
-<!-- This page will contain some products with a shopping cart. The customer will be able to click on the Cart button and add the products to the cart for purchase. And see the number of products purchased in their cart. -->
-
 
 ## Installation
 
@@ -28,10 +26,6 @@ https://fakestoreapi.com/products
 2. You can filter the products by category and also by searching the title of the product. Once you get the product of your choice, scroll down to the bottom of the page.
 
 3. There is a form that the visitor on the page can use to state the product and quantity of their purchase and leave their contact and location information that the supplier to contact them on.
-
-// 3. You can also click the add cart button and the product will be added into your cart.
-
-// 4. You can also add as many products into your cart and as many times as you can.
 
 ```
 
