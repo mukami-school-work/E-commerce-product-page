@@ -23,9 +23,11 @@ https://fakestoreapi.com/products
 
 ```javascript
 
-1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, price, and the buy now button. 
+1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, price, and the buy now button.
 
-2. There is a form at the bottom of the page that you can use to state the product and quantity of purchase and leave your contact and location information.
+2. You can filter the products by category and also by searching the title of the product. Once you get the product of your choice, scroll down to the bottom of the page.
+
+3. There is a form that the visitor on the page can use to state the product and quantity of their purchase and leave their contact and location information that the supplier to contact them on.
 
 // 3. You can also click the add cart button and the product will be added into your cart.
 
