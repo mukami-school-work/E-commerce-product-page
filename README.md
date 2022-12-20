@@ -1,8 +1,11 @@
 # E-Commerce-Product-Page
 
-This page will contain some products with a shopping cart. The products will be fetched from the API and rendered onto our page. The user will be able to click on the view more button and get to see the description of the product and its price.
+This page will contain a collection of all products that this particular company has. The purpose of this page is to have a presence online and have a form in which the prospective customers can reach out to the company.
 
-The customer will be able to click on the Cart button and add the products to the cart for purchase. And see the number of products purchased in their cart.
+The products will be fetched from the API and rendered onto our page. The products will have a title and the price of the product.
+
+<!-- This page will contain some products with a shopping cart. The customer will be able to click on the Cart button and add the products to the cart for purchase. And see the number of products purchased in their cart. -->
+
 
 ## Installation
 
@@ -20,13 +23,13 @@ https://fakestoreapi.com/products
 
 ```javascript
 
-1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, price, and the view more button. 
+1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, price, and the buy now button. 
 
-2. When the view more button is clicked the description of the product is rendered on the page.
+2. There is a form at the bottom of the page that you can use to state the product and quantity of purchase and leave your contact and location information.
 
-3. At this point you can click the add cart button and the product will be added into your cart.
+// 3. You can also click the add cart button and the product will be added into your cart.
 
-4. You can also add as many products into your cart and as many times as you can.
+// 4. You can also add as many products into your cart and as many times as you can.
 
 ```
 
