@@ -68,13 +68,16 @@
 	.home{
 		min-height: 100vh;
 		width: 100%;
-		background: url(../img/background.jpg);
+		background: url("https://plus.unsplash.com/premium_photo-1661501678867-f9a0ae7783ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 		background-size: cover;
 		background-position: center top;
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		align-items: center;
+	}
+	.home-text{
+		background-color: rgb(249, 244, 241, 0.7);
 	}
 	.home-text h1{
 		font-size: 4.5rem;
@@ -87,7 +90,7 @@
 		font-size: 3.3rem;
 	}
 	.home-text p{
-		font-size: 1rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 		margin-bottom: 3rem;
 		letter-spacing: .2rem;
