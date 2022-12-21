@@ -4,16 +4,14 @@ This page will contain a collection of all products that this particular company
 
 The products will be fetched from the API and rendered onto our page. The products will have a title and the price of the product.
 
-
 [View my live page](https://mukami-school-work.github.io/E-commerce-product-page/ "Visit my page")
 
 
 ## Installation
 
-
 To run this application:
 
-- Clone the repository from [mukami-school-work/E-commerce-product-page](https://github.com/mukami-school-work/E-commerce-product-page). If you see a 404, in the page when trying to clone, kindly ask me to add you to the repository as a contributor.
+- Clone the repository from [mukami-school-work/E-commerce-product-page](https://github.com/mukami-school-work/E-commerce-product-page). If incase you see a 404, in the page when trying to clone, kindly ask me to add you to the repository as a contributor.
 - Ensure that you have the api as below:
 
 ```bash
@@ -28,7 +26,7 @@ https://fakestoreapi.com/products
 
 2. You can filter the products by category and also by searching the title of the product. Once you get the product of your choice, scroll down to the bottom of the page.
 
-3. There is a form that the visitor on the page can use to state the product and quantity of their purchase and leave their contact and location information that the supplier to contact them on.
+3. There is a form that the prospective buyer on the page can use to state the product and quantity of their purchase and leave their contact and location information that the supplier will use to contact them.
 
 ```
 
