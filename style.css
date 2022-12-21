@@ -78,6 +78,7 @@
 	}
 	.home-text{
 		background-color: rgb(249, 244, 241, 0.7);
+		padding: 5%;
 	}
 	.home-text h1{
 		font-size: 4.5rem;
@@ -194,5 +195,50 @@
 		font-size: 14px;
 		letter-spacing: 1px;
 	}
-
 	/* End of footer */
+
+	/* media queries */
+	@media (max-width: 1000px){
+		header{
+			padding: 7px 4%;
+			transition: .2s;
+		}
+		header.sticky{
+			padding: 14px 4%;
+			transition: .2s;
+		}
+		section{
+			padding: 80px 4%;
+			transition: .1s;
+		}
+	}
+
+	@media (max-width: 670px){
+		#menu-icon{
+			display: block;
+			cursor: pointer;
+		}
+		.header-icons{
+			display: inline-flex;
+		}
+		.navli{
+			position: absolute;
+			top: 100%;
+			left: -100%;
+			width: 280px;
+			height: 120vh;
+			background: #ffffff;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 150px 30px;
+			transition: all .45s ease;
+		}
+		.navli a{
+			display: block;
+			margin: 1.2rem 0;
+		}
+		.navli.open{
+			left: 0;
+		}
+	}
