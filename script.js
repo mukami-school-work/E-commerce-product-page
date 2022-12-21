@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       })
 
-  // add event listener
+  // add event listener for filtering products by title
     filterInput.addEventListener('keyup', filterProducts);
 
     // add event listener on the all button
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       location.reload();
     });
 
-  // callback function 
+  // Filtering products by title callback function 
     function filterProducts(){
         let filterValue = filterInput.value.toUpperCase();
         let item = grid.querySelectorAll('.item')
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } 
         }
     } 
-  // get value from the api create dynamic buttons
+  //filtering products by category
     function addButton(appendIn, value){
       let button = document.createElement('button');
       button.className = "border-2 px-8 py-1 bg-yellow-400 border rounded-md "
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       appendIn.appendChild(button);
 
-  // add event listener
+  // add event listener to filter by category
       button.addEventListener('click', filterProduct);
 
       function filterProduct(){
@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
+      
+
   // get value from the api create dynamic element
   function addElement(appendIn, value){
       let div = document.createElement('div');
@@ -94,16 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let { image, title, category, price } = value;
       div.innerHTML = `
-              <img src="${image}" class="bg-cover img mx-auto" alt="img1">
+              <img src="${image}" class="bg-cover img mx-auto shop-item-image" alt="img1">
               <div class="text-center py-3 font-poppins">
-                  <h1 class="text-lg title">${title}</h1>
+                  <h1 class="text-lg title shop-item-title">${title}</h1>
                   <a href="#" class="block"><span class="text-sm text-red-400">${category}</span></a>
-                  <span class="block py-3">$<span class="text-md">${price}</span></span>
-                  <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md">Buy Now</button>
+                  <span class="block py-3">$<span class="text-md shop-item-price">${price}</span></span>
+                  <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md shop-item-button" style="width:100%;"></button>
               </div>
       `;
       appendIn.appendChild(div); 
   }
+  
 });
 
  // Contact form section starts here
