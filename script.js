@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() { 
 
-   // Hero Section
+// home section
+  const sr = ScrollReveal ({
+    distance: '30px',
+    duration: 2600,
+    reset: true
+  })
 
-    const sr = ScrollReveal ({
-      distance: '30px',
-      duration: 2600,
-      reset: true
-    })
-
-    sr.reveal('.home-text',{delay:280, origin:'bottom'})
-
-    // End Hero Section
+  sr.reveal('.home-text',{delay:280, origin:'bottom'})
+// End home section
 
   let grid = document.querySelector(".products");
   let filterInput = document.getElementById("filterInput");
@@ -21,86 +19,73 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => res.json())
       .then(json =>{
 
-          // iterating products
+      // iterating products
           for (let value of json){
-              
               addElement(grid, value)
-            
           }
-          
       });
 
       fetch('https://fakestoreapi.com/products/categories')
       .then(res=>res.json())
       .then(json=> {
 
-        // iterating categories
-        for (let value of json){
-          console.log(value)
-              
-          addButton(buttons, value);
-        
-        }
-      
+      // iterating categories
+          for (let value of json){     
+            addButton(buttons, value);
+          }
       })
 
-
   // add event listener
-  filterInput.addEventListener('keyup', filterProducts);
+    filterInput.addEventListener('keyup', filterProducts);
 
-  // add event listener on the all button
-  allButton.addEventListener('click', () => {
-    location.reload();
-  });
+    // add event listener on the all button
+    allButton.addEventListener('click', () => {
+      location.reload();
+    });
 
   // callback function 
-  function filterProducts(){
-      let filterValue = filterInput.value.toUpperCase();
-      let item = grid.querySelectorAll('.item')
-      // console.log(filterValue);
+    function filterProducts(){
+        let filterValue = filterInput.value.toUpperCase();
+        let item = grid.querySelectorAll('.item')
 
-      for (let i = 0; i < item.length; i++){
-          let span = item[i].querySelector('.title');
+        for (let i = 0; i < item.length; i++){
+            let span = item[i].querySelector('.title');
 
-          if(span.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-              item[i].style.display = "initial";
-          }else{
-              item[i].style.display = "none";
-          }
-          
-      }
-  } 
-
-
+            if(span.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                item[i].style.display = "initial";
+            }else{
+                item[i].style.display = "none";
+            } 
+        }
+    } 
   // get value from the api create dynamic buttons
-  function addButton(appendIn, value){
-  let button = document.createElement('button');
-  button.className = "border-2 px-8 py-1 bg-yellow-400 border rounded-md "
-  let [ a, b, c, d ] = value;
-  button.id = value;
-  let categoryChoice = button.innerHTML = value;
+    function addButton(appendIn, value){
+      let button = document.createElement('button');
+      button.className = "border-2 px-8 py-1 bg-yellow-400 border rounded-md "
+      let [ a, b, c, d ] = value;
+      button.id = value;
+      let categoryChoice = button.innerHTML = value;
 
-  appendIn.appendChild(button);
+      appendIn.appendChild(button);
 
   // add event listener
-  button.addEventListener('click', filterProduct);
+      button.addEventListener('click', filterProduct);
 
-  function filterProduct(){
-    let buttonValue = categoryChoice.toUpperCase();
-    let item = grid.querySelectorAll('.item');
+      function filterProduct(){
+        let buttonValue = categoryChoice.toUpperCase();
+        let item = grid.querySelectorAll('.item');
 
-      for (let i = 0; i < item.length; i++){
-        let span = item[i].querySelector('a.block');
+          for (let i = 0; i < item.length; i++){
+            let span = item[i].querySelector('a.block');
 
-          if(span.innerHTML.toUpperCase().indexOf(buttonValue) > -1){
-              item[i].style.display = "initial";
-          }else{
-              item[i].style.display = "none";
+              if(span.innerHTML.toUpperCase().indexOf(buttonValue) > -1){
+                  item[i].style.display = "initial";
+              }else{
+                  item[i].style.display = "none";
+              }
           }
-      
+        }
       }
-    }
-  }
 
   // get value from the api create dynamic element
   function addElement(appendIn, value){
@@ -117,8 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md">Buy Now</button>
               </div>
       `;
-      appendIn.appendChild(div);
-    
+      appendIn.appendChild(div); 
   }
 });
 
