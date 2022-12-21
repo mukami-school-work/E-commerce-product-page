@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="text-center py-3 font-poppins">
                   <h1 class="text-lg title shop-item-title">${title}</h1>
                   <a href="#" class="block"><span class="text-sm text-red-400">${category}</span></a>
-                  <span class="block py-3">$<span class="text-md shop-item-price">${price}</span></span>
-                  <button class="border-2 px-8 py-1 bg-yellow-400 border rounded-md shop-item-button" style="width:100%;"></button>
+                  <span class="block py-3">$<span class="text-md shop-item-price" style="font-weight: bolder; font-size: 20px;">${price}</span></span>
               </div>
       `;
       appendIn.appendChild(div); 
