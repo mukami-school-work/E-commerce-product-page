@@ -54,4 +54,6 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Copyright (c) 2022 Liz D. Mukami
+
+All rights reserved. This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
