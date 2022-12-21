@@ -5,6 +5,9 @@ This page will contain a collection of all products that this particular company
 The products will be fetched from the API and rendered onto our page. The products will have a title and the price of the product.
 
 
+[View my live page](https://mukami-school-work.github.io/E-commerce-product-page/ "Visit my page")
+
+
 ## Installation
 
 
