@@ -105,7 +105,8 @@
 	}
 	.btn:hover{
 		transform: translateY(-5px);
-		background: #111111;
+		background: #ffc11a;
+		color: #000;
 	}
 
 	header.sticky{
@@ -140,7 +141,6 @@
 
 		/* footer */
 	.contact{
-		background: var(--text-color);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 		gap: 2rem;
@@ -148,7 +148,6 @@
 	.main-contact h3{
 		font-size: 23px;
 		margin-bottom: 1.6rem;
-		color: var(--bg-color);
 	}
 	.main-contact h5{
 		font-size: 15px;
@@ -166,7 +165,6 @@
 		transition: all .35s ease;
 	}
 	.icons i:hover{
-		color: var(--bg-color);
 		transform: scale(1.1) translateY(-5px);
 	}
 	.main-contact li{
@@ -175,22 +173,21 @@
 	.main-contact li a{
 		display: block;
 		color: #555;
-		font-size: var(--normal-font);
+		font-size: 1rem;
 		font-weight: 600;
 		transition: all .35s ease;
 	}
 	.main-contact li a:hover{
 		transform: translateX(-8px);
-		color: var(--bg-color);
 	}
 
 	.last-text{
 		text-align: center;
 		padding: 20px;
-		background: var(--text-color);
+		background: #111111;
 	}
 	.last-text p{
-		color: #555;
+		color: #f9f4f1;
 		font-size: 14px;
 		letter-spacing: 1px;
 	}
