@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // home section
   const header = document.querySelector("header");
 
-  window.addEventListener ("scroll", function() {
-    header.classList.toggle ("sticky", window.scrollY > 0);
-  });
+  // window.addEventListener ("scroll", function() {
+  //   header.classList.toggle ("sticky", window.scrollY > 0);
+  // });
 
   let menu = document.querySelector('#menu-icon');
   let navlist = document.querySelector('.navli');
@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // iterating products
           for (let value of json){
               addElement(grid, value)
+            
+              
           }
       });
 
@@ -62,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
     allButton.addEventListener('click', () => {
       location.reload();
     });
+
+
 
   // Filtering products by title callback function 
     function filterProducts(){
@@ -124,6 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>
       `;
       appendIn.appendChild(div); 
+
+      // console.log(button)
+      let button = document.getElementById('shop-item-btn');
+      
   }
   
 });
