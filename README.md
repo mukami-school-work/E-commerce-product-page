@@ -1,8 +1,8 @@
 # E-Commerce-Product-Page
 
-This page will contain a collection of all products that this particular company has. The purpose of this page is to have a presence online and have a form in which the prospective customers can reach out to the company.
+This page will contain a collection of all products that this particular company has. The purpose of this page is to create an online presence for the company and have a form in which the prospective customers can reach out to the company.
 
-The products will be fetched from the API and rendered onto our page. The products will have a title and the price of the product.
+The products will be fetched from an API and rendered onto the page. The products will have a title and the price of the product.
 
 [View my live page](https://mukami-school-work.github.io/E-commerce-product-page/ "Visit my page")
 
@@ -22,7 +22,7 @@ https://fakestoreapi.com/products
 
 ```javascript
 
-1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, price, and the buy now button.
+1. When you open the `index.html` file in the browser, you should see a number of products, displaying the images, title, category, and the price.
 
 2. You can filter the products by category and also by searching the title of the product. Once you get the product of your choice, scroll down to the bottom of the page.
 
