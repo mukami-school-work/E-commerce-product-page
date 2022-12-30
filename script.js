@@ -1,11 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() { 
 
-// home section
+// home section side slide menu
   const header = document.querySelector("header");
-
-  // window.addEventListener ("scroll", function() {
-  //   header.classList.toggle ("sticky", window.scrollY > 0);
-  // });
 
   let menu = document.querySelector('#menu-icon');
   let navlist = document.querySelector('.navli');
